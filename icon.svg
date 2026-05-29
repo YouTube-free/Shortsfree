@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#C4003D"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="115" ry="115" fill="url(#bg)" filter="url(#shadow)"/>
+
+  <!-- Shine overlay -->
+  <rect width="512" height="512" rx="115" ry="115" fill="url(#shine)"/>
+
+  <!-- Play triangle -->
+  <polygon points="188,148 380,256 188,364" fill="white" opacity="0.97"/>
+
+  <!-- Sound waves (music vibe) -->
+  <path d="M400 192 Q430 230 430 256 Q430 282 400 320" stroke="white" stroke-width="22"
+        stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M430 164 Q476 210 476 256 Q476 302 430 348" stroke="white" stroke-width="18"
+        stroke-linecap="round" fill="none" opacity="0.28"/>
+</svg>

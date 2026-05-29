@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0a0a0b"/>
+      <stop offset="100%" stop-color="#1a1a1e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#C4003D"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="40" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Glow orb background -->
+  <circle cx="600" cy="315" r="260" fill="#FF2D55" opacity="0.07" filter="url(#softglow)"/>
+
+  <!-- Grid lines subtle -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- App icon -->
+  <rect x="490" y="185" width="220" height="220" rx="52" fill="url(#accentGrad)" filter="url(#glow)"/>
+  <!-- shine on icon -->
+  <rect x="490" y="185" width="220" height="110" rx="52" fill="rgba(255,255,255,0.10)"/>
+  <!-- Play triangle -->
+  <polygon points="566,242 686,295 566,348" fill="white" opacity="0.96"/>
+  <!-- Sound waves -->
+  <path d="M700 258 Q718 280 718 295 Q718 310 700 332"
+        stroke="white" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.55"/>
+
+  <!-- App name -->
+  <text x="600" y="462" font-family="Georgia, 'Times New Roman', serif"
+        font-size="72" font-weight="700" fill="white" text-anchor="middle"
+        letter-spacing="-2">YouTune</text>
+
+  <!-- Tagline -->
+  <text x="600" y="510" font-family="system-ui, -apple-system, sans-serif"
+        font-size="24" fill="rgba(255,255,255,0.42)" text-anchor="middle"
+        letter-spacing="1.5">MINIMALISTIC YOUTUBE EXPERIENCE</text>
+
+  <!-- Accent bar bottom -->
+  <rect x="520" y="540" width="160" height="3" rx="2" fill="url(#accentGrad)" opacity="0.7"/>
+</svg>
